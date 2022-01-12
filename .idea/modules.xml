@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spdnettwo.iml" filepath="$PROJECT_DIR$/.idea/modules/spdnettwo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SPD-classes/spdnettwo.SPD-classes.iml" filepath="$PROJECT_DIR$/.idea/modules/SPD-classes/spdnettwo.SPD-classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android/spdnettwo.android.iml" filepath="$PROJECT_DIR$/.idea/modules/android/spdnettwo.android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/spdnettwo.core.iml" filepath="$PROJECT_DIR$/.idea/modules/core/spdnettwo.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/desktop/spdnettwo.desktop.iml" filepath="$PROJECT_DIR$/.idea/modules/desktop/spdnettwo.desktop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ios/spdnettwo.ios.iml" filepath="$PROJECT_DIR$/.idea/modules/ios/spdnettwo.ios.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/services/spdnettwo.services.iml" filepath="$PROJECT_DIR$/.idea/modules/services/spdnettwo.services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/services/news/spdnettwo.services.news.iml" filepath="$PROJECT_DIR$/.idea/modules/services/news/spdnettwo.services.news.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/services/news/debugNews/spdnettwo.services.news.debugNews.iml" filepath="$PROJECT_DIR$/.idea/modules/services/news/debugNews/spdnettwo.services.news.debugNews.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/services/news/shatteredNews/spdnettwo.services.news.shatteredNews.iml" filepath="$PROJECT_DIR$/.idea/modules/services/news/shatteredNews/spdnettwo.services.news.shatteredNews.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/services/updates/spdnettwo.services.updates.iml" filepath="$PROJECT_DIR$/.idea/modules/services/updates/spdnettwo.services.updates.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/services/updates/debugUpdates/spdnettwo.services.updates.debugUpdates.iml" filepath="$PROJECT_DIR$/.idea/modules/services/updates/debugUpdates/spdnettwo.services.updates.debugUpdates.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/services/updates/githubUpdates/spdnettwo.services.updates.githubUpdates.iml" filepath="$PROJECT_DIR$/.idea/modules/services/updates/githubUpdates/spdnettwo.services.updates.githubUpdates.iml" />
+    </modules>
+  </component>
+</project>
