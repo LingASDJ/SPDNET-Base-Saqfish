@@ -108,6 +108,7 @@ public abstract class Char extends Actor {
 	
 	public int pos = 0;
 	
+
 	public CharSprite sprite;
 	
 	public int HT;

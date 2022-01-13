@@ -22,9 +22,11 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.saqfish.spdnet.Dungeon;
 import com.saqfish.spdnet.items.Item;
+import com.saqfish.spdnet.messages.Messages;
 import com.saqfish.spdnet.net.actor.Player;
 import com.saqfish.spdnet.net.events.Events;
 import com.saqfish.spdnet.net.events.Receive;
+import com.saqfish.spdnet.net.events.Send;
 import com.saqfish.spdnet.net.windows.NetWindow;
 import com.saqfish.spdnet.scenes.GameScene;
 import com.saqfish.spdnet.utils.GLog;
@@ -120,7 +122,7 @@ public class Receiver {
 
         // Leave/Join
         public void handleLeaveJoin(boolean isLeaving,  String nick) {
-                GLog.p(nick + " has " + (isLeaving? "left": "joined"));
+                GLog.p(nick + (Messages.get("has"))+ (isLeaving? (Messages.get("join")): (Messages.get("left"))));
         }
 
         // Action handler
@@ -165,22 +167,20 @@ public class Receiver {
         // Item sharing handler
         public void handleTransfer(String json) {
                 try {
-                        Receive.Transfer i = mapper.readValue(json, Receive.Transfer.class);
-                        Class<?> k = Reflection.forNameUnhandled(addPkgName(i.className));
-
-                        Item item = (Item) Reflection.newInstance(k);
+                        Receive.Transfer i = (Receive.Transfer) this.mapper.readValue(json, Receive.Transfer.class);
+                        Item item = (Item) Reflection.newInstance(Reflection.forNameUnhandled(addPkgName(i.className)));
                         item.cursed = i.cursed;
                         item.level(i.level);
-                        if(i.identified) item.identify();
-
-                        item.quantity(i.count);
+                        if (i.identified) {
+                                item.identify();
+                        }
                         item.doPickUp(Dungeon.hero);
                         GameScene.pickUp(item, Dungeon.hero.pos);
-
-                        GLog.p("You received a "+item.name());
-                } catch (Exception ignored) { }
-
+                        GLog.p((Messages.get("received")) + item.name(), new Object[0]);
+                } catch (Exception e) {
+                }
         }
+
 
         // Chat handler
         public static class ChatMessage {

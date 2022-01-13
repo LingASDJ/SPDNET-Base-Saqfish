@@ -340,4 +340,8 @@ public class SPDSettings extends GameSettings {
 		return getBoolean( KEY_WINDOW_MAXIMIZED, false );
 	}
 
+	private static final String DEBUG_REPORT  = "debug_report";
+	public static boolean debugReport() {
+		return getBoolean(DEBUG_REPORT,false);
+	}
 }

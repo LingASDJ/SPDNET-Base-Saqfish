@@ -125,7 +125,12 @@ public class ShatteredPixelDungeon extends Game {
 
 	}
 
-	@Override
+	private static String log = "";
+	public static void appendLog(String string) {
+		log += "\n\n" + string;
+	}
+
+    @Override
 	public void create() {
 		super.create();
 

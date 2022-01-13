@@ -56,7 +56,7 @@ public class NetWindow extends Window {
     }
 //adlda
     public static void error(String message){
-        message(NetIcons.get(NetIcons.ALERT), "Connection Error", message);
+        message(NetIcons.get(NetIcons.ALERT), Messages.get("ce"),  Messages.get("cer"));
     }
 
     public static void error(String title, String message){

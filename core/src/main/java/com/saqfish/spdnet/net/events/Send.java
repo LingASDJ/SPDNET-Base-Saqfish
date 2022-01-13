@@ -30,6 +30,7 @@ import com.saqfish.spdnet.items.armor.Armor;
 import com.saqfish.spdnet.items.artifacts.Artifact;
 import com.saqfish.spdnet.items.rings.Ring;
 import com.saqfish.spdnet.levels.features.Chasm;
+import com.saqfish.spdnet.messages.Messages;
 import com.watabou.noosa.Game;
 
 import static com.saqfish.spdnet.ShatteredPixelDungeon.net;
@@ -51,15 +52,15 @@ public class Send {
         public String cause;
 
         public Death(Object cause){
-            if(cause instanceof Mob) this.cause = "was killed by a " + ((Mob)cause).name();
-            else if(cause instanceof Chasm) this.cause = "fell to death";
-            else if(cause instanceof Bleeding) this.cause = "bled to death";
-            else if(cause instanceof Burning) this.cause = "burned to death";
-            else this.cause = "died";
+            if(cause instanceof Mob) this.cause = (Messages.get(Send.class,"was_kill"))  + ((Mob)cause).name();
+            else if(cause instanceof Chasm) this.cause = (Messages.get(Send.class,"fell_death"));
+            else if(cause instanceof Bleeding) this.cause = (Messages.get(Send.class,"bleed_death"));
+            else if(cause instanceof Burning) this.cause = (Messages.get(Send.class,"buring_died"));
+            else this.cause = (Messages.get(Send.class,"died"));
         }
 
         public Death(String whom){
-            this.cause = " killed"+whom;
+            this.cause =(Messages.get(Send.class,"killed"))+whom;
         }
     }
 

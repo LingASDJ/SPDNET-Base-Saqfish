@@ -21,6 +21,8 @@
 
 package com.saqfish.spdnet.utils;
 
+import com.saqfish.spdnet.SPDSettings;
+import com.saqfish.spdnet.ShatteredPixelDungeon;
 import com.saqfish.spdnet.messages.Messages;
 import com.watabou.utils.DeviceCompat;
 import com.watabou.utils.Signal;
@@ -33,7 +35,7 @@ public class GLog {
 	public static final String NEGATIVE		= "-- ";
 	public static final String WARNING		= "** ";
 	public static final String HIGHLIGHT	= "@@ ";
-
+	public static final String DEBUG   		= "[DEBUG]: ";
 	public static final String NEW_LINE	    = "\n";
 	
 	public static Signal<String> update = new Signal<>();
@@ -66,5 +68,30 @@ public class GLog {
 	
 	public static void h( String text, Object... args ) {
 		i( HIGHLIGHT + text, args );
+	}
+
+	public static void info(String text, Object... args ) {
+
+		if (args.length > 0) {
+			text = Messages.format( text, args );
+		}
+
+		DeviceCompat.log( TAG, text );
+		update.dispatch( text );
+	}
+
+
+	public static void debug(String text, Object... args ) {
+		StackTraceElement[] trace = Thread.currentThread().getStackTrace();
+		StringBuilder addToLog = new StringBuilder(DEBUG + text);
+		addToLog.append("\n" + "Trace:\n");
+		for (StackTraceElement element : trace) {
+			addToLog.append(element.toString()).append("\n");
+		}
+		ShatteredPixelDungeon.appendLog(addToLog.toString());
+
+		if (SPDSettings.debugReport()) {
+			info(DEBUG + text, args);
+		}
 	}
 }

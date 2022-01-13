@@ -883,11 +883,9 @@ public class GameScene extends PixelScene {
 	}
 
 	public static void addSprite( Mob mob ) {
+		Dungeon.level.mobs.add( mob );
 		scene.addMobSprite( mob );
-	}
-
-	public static void addSprite( Player p ) {
-		scene.addMobSprite( p );
+		Actor.add( mob );
 	}
 
 	public static void add( Mob mob, float delay ) {

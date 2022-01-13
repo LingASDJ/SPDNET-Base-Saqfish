@@ -9,6 +9,7 @@ import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.utils.Align;
 import com.saqfish.spdnet.Chrome;
+import com.saqfish.spdnet.messages.Messages;
 import com.saqfish.spdnet.net.Receiver;
 import com.saqfish.spdnet.net.ui.BlueButton;
 import com.saqfish.spdnet.scenes.PixelScene;
@@ -21,7 +22,7 @@ import com.watabou.utils.DeviceCompat;
 
 public class WndChat extends NetWindow {
 
-	private static final int MARGIN 		= 2;
+	private static final int MARGIN 		= 0;
 	private static final int BUTTON_HEIGHT	= 16;
 
 	public static final float WIDTH_P        = 120;
@@ -78,7 +79,7 @@ public class WndChat extends NetWindow {
 		protected void createChildren() {
 			super.createChildren();
 
-			int textSize = (int)PixelScene.uiCamera.zoom * 8;
+			int textSize = (int)PixelScene.uiCamera.zoom * 5;
 			textInput = new TextInput(Chrome.get(Chrome.Type.TOAST), false, textSize);
 			textInput.setMaxLength(200);
 			textInput.setTextAlignment(Align.left);
@@ -161,9 +162,9 @@ public class WndChat extends NetWindow {
 	private void addChatMessage(Receiver.ChatMessage message){
 		boolean isSender = message.id.equals(net().socket().id());
 		boolean isMobile = DeviceCompat.isAndroid() || DeviceCompat.isiOS();
-		RenderedTextBlock r = PixelScene.renderTextBlock(isMobile ? 7: 9);
+		RenderedTextBlock r = PixelScene.renderTextBlock(isMobile ? 5: 5);
 
-		String finalNick  = isSender ? "You" :message.nick;
+		String finalNick  = isSender ? Messages.get("You")+message.nick:message.nick;
 
 		r.text(finalNick +": "+ message.message, width);
 

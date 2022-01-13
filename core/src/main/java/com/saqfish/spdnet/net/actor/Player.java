@@ -85,7 +85,6 @@ public class Player extends Mob {
 
 	@Override
 	public void destroy() {
-
 		super.destroy();
 		Dungeon.level.players.remove( this );
 	}
@@ -161,7 +160,7 @@ public class Player extends Mob {
 		if(Dungeon.level.players != null) {
 			for (Player op : Dungeon.level.players){
 				if(op.socketid().equals(id)) {
-					op.sprite.destroy();
+					//op.sprite.destroy();
 					op.destroy();
 				}
 			}

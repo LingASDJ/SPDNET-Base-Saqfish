@@ -165,7 +165,7 @@ public class TitleScene extends PixelScene {
 				if (net().connected()) {
 					net().sender().sendPlayerListRequest();
 				}else{
-					NetWindow.error("Not Connected", "You must connect before viewing players");
+					NetWindow.error(Messages.get("noconnect"), (Messages.get("youmustbe")));
 					return;
 				}
 				net().socket().once(Events.PLAYERLISTREQUEST, args -> {
@@ -191,7 +191,7 @@ public class TitleScene extends PixelScene {
 				if (net().connected()) {
 					net().sender().sendRecordsRequest();
 				}else{
-					NetWindow.error("Not Connected", "You must connect before viewing players");
+					ShatteredPixelDungeon.switchNoFade( RankingsScene.class );
 					return;
 				}
 				net().socket().once(Events.RECORDS, args -> {
