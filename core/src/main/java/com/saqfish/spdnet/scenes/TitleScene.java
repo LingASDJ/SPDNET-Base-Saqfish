@@ -204,12 +204,6 @@ public class TitleScene extends PixelScene {
 					}
 				});
 			}
-
-			@Override
-			protected boolean onLongClick() {
-				ShatteredPixelDungeon.switchNoFade( RankingsScene.class );
-				return true;
-			}
 		};
 		btnRankings.icon(Icons.get(Icons.RANKINGS));
 		add(btnRankings);

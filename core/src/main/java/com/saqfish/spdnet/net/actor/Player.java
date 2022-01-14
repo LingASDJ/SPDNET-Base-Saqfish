@@ -90,9 +90,10 @@ public class Player extends Mob {
 	}
 
 	public void leave(){
-	    destroy();
 		if( sprite != null) {
+			destroy();
 			((PlayerSprite)sprite).leave();
+
 			sprite.emitter().burst( SmokeParticle.FACTORY, 6 );
 		}
 	}
@@ -160,7 +161,7 @@ public class Player extends Mob {
 		if(Dungeon.level.players != null) {
 			for (Player op : Dungeon.level.players){
 				if(op.socketid().equals(id)) {
-					//op.sprite.destroy();
+					op.sprite.destroy();
 					op.destroy();
 				}
 			}

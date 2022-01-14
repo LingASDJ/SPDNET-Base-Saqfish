@@ -38,8 +38,8 @@ public class WndPlayerList extends NetWindow {
 	private static final int WIDTH_L = 144;
 	private static final int HEIGHT	= 150;
 	private ScrollPane list;
-	private static final int VGAP = 3;
-	private static final int HGAP = 3;
+	private static final int VGAP = 15;
+	private static final int HGAP = 8;
 	private Camera cam = camera();
 	public static class Roles {
 		public static final int ADMIN = 0;
