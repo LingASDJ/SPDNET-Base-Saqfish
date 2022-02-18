@@ -4,6 +4,12 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/bed5f562e66b689ae30edcf1ffcfa2ca/transformed/jetified-uce_handler-1.4/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bed5f562e66b689ae30edcf1ffcfa2ca/transformed/jetified-uce_handler-1.4/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bed5f562e66b689ae30edcf1ffcfa2ca/transformed/jetified-uce_handler-1.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/62ae55f8a90574fae5e49e0cce3bcf48/transformed/jetified-uce_handler-1.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/62ae55f8a90574fae5e49e0cce3bcf48/transformed/jetified-uce_handler-1.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/62ae55f8a90574fae5e49e0cce3bcf48/transformed/jetified-uce_handler-1.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/070bb07f6dcb4f372dd28e454d7dd1ef/transformed/jetified-uce_handler-1.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/070bb07f6dcb4f372dd28e454d7dd1ef/transformed/jetified-uce_handler-1.4/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/070bb07f6dcb4f372dd28e454d7dd1ef/transformed/jetified-uce_handler-1.4/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

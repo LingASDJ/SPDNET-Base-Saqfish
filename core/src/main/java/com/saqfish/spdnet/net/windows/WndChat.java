@@ -15,6 +15,7 @@ import com.saqfish.spdnet.net.ui.BlueButton;
 import com.saqfish.spdnet.scenes.PixelScene;
 import com.saqfish.spdnet.ui.RenderedTextBlock;
 import com.saqfish.spdnet.ui.ScrollPane;
+import com.saqfish.spdnet.windows.WndChallenges;
 import com.watabou.noosa.Camera;
 import com.watabou.noosa.TextInput;
 import com.watabou.noosa.ui.Component;
@@ -164,7 +165,7 @@ public class WndChat extends NetWindow {
 		boolean isMobile = DeviceCompat.isAndroid() || DeviceCompat.isiOS();
 		RenderedTextBlock r = PixelScene.renderTextBlock(isMobile ? 5: 5);
 
-		String finalNick  = isSender ? Messages.get("You")+message.nick:message.nick;
+		String finalNick  = isSender ? Messages.get(WndChat.class,"You")+message.nick:message.nick;
 
 		r.text(finalNick +": "+ message.message, width);
 

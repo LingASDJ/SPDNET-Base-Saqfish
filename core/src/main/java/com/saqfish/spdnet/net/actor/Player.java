@@ -85,15 +85,15 @@ public class Player extends Mob {
 
 	@Override
 	public void destroy() {
+
 		super.destroy();
 		Dungeon.level.players.remove( this );
 	}
 
 	public void leave(){
+		destroy();
 		if( sprite != null) {
-			destroy();
 			((PlayerSprite)sprite).leave();
-
 			sprite.emitter().burst( SmokeParticle.FACTORY, 6 );
 		}
 	}
@@ -172,9 +172,9 @@ public class Player extends Mob {
 
 	public static void movePlayer(Player p, int pos, int pc){
 		if(p != null && p.sprite != null) {
-		    if(p.sprite.parent == null){
-		    	p.sprite.destroy();
-		    	GameScene.addSprite(p);
+			if(p.sprite.parent == null){
+				p.sprite.destroy();
+				GameScene.addSprite(p);
 			}
 			p.move(pos);
 		}

@@ -6,6 +6,6 @@
         </trust-anchors>
     </base-config>
     <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="true">saqfish.com:5800</domain>
+        <domain includeSubdomains="false">cn-zz-s1-b.miaovps.com:10093</domain>
     </domain-config>
 </network-security-config>

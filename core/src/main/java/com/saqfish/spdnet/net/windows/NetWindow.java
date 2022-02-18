@@ -52,11 +52,11 @@ public class NetWindow extends Window {
     }
 
     public static void message(String message){
-        message(NetIcons.get(NetIcons.GLOBE), "Server Message", message);
+        message(NetIcons.get(NetIcons.GLOBE), "服务器信息", message);
     }
 //adlda
     public static void error(String message){
-        message(NetIcons.get(NetIcons.ALERT), Messages.get("ce"),  Messages.get("cer"));
+        message(NetIcons.get(NetIcons.ALERT), Messages.get(NetWindow.class,"noconneted"),  "连接被拒绝(检查密钥是否正确或者服务器是否正常)");
     }
 
     public static void error(String title, String message){

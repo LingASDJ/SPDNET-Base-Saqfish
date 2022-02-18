@@ -54,7 +54,7 @@ public class WndServerInfo extends NetWindow {
 
         int maxWidth = PixelScene.landscape() ? WIDTH_L : WIDTH_P;
 
-        title = new IconTitle(NetIcons.get(NetIcons.GLOBE), Messages.get("sc"));
+        title = new IconTitle(NetIcons.get(NetIcons.GLOBE), Messages.get(WndServerInfo.class,"sc"));
         title.setRect(0, 0, maxWidth, 20);
         add(title);
 
@@ -72,7 +72,7 @@ public class WndServerInfo extends NetWindow {
             @Override
             public synchronized void update() {
                 super.update();
-                text(net().connected() ? Messages.get("con") : Messages.get("don") );
+                text(net().connected() ? Messages.get(WndServerInfo.class,"con") : Messages.get(WndServerInfo.class,"don") );
                 hardlight(net().connected() ? 0x00FF00 : 0xFF0000);
             }
         };
@@ -83,7 +83,7 @@ public class WndServerInfo extends NetWindow {
 
         bottom = status.bottom() + (GAP*3);
 
-        keyBtn = new BlueButton(Messages.get("key")) {
+        keyBtn = new BlueButton(Messages.get(WndServerInfo.class,"key")) {
             @Override
             protected void onClick() {
                 NetWindow.showKeyInput();
@@ -94,11 +94,11 @@ public class WndServerInfo extends NetWindow {
         keyBtn.setPos(0, bottom);
 
         float finalBottom = bottom;
-        connectBtn = new BlueButton(Messages.get("contwo")) {
+        connectBtn = new BlueButton(Messages.get(WndServerInfo.class,"contwo")) {
             @Override
             public synchronized void update() {
                 super.update();
-                text.text(net().connected() ? Messages.get("dis")/*"Disconnect"*/ : /*"Connect"*/Messages.get("cas"));
+                text.text(net().connected() ? Messages.get(WndServerInfo.class,"dis")/*"Disconnect"*/ : /*"Connect"*/Messages.get(WndServerInfo.class,"cas"));
                 connectBtn.setRect(keyBtn.right(), finalBottom, maxWidth/2 , BTN_HEIGHT);
             }
 

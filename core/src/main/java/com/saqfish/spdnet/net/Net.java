@@ -47,11 +47,11 @@ import org.json.JSONObject;
 import static java.util.Collections.singletonMap;
 
 public class Net {
-    public static String DEFAULT_HOST = "cn-zz-s1-b.miaovps.com";
+    public static String DEFAULT_HOST = "150.138.72.220";
     public static String DEFAULT_SCHEME = "http";
     public static String DEFAULT_KEY = (Messages.get(Net.class,"debug"));
     public static long DEFAULT_ASSET_VERSION = 0;
-    public static int DEFAULT_PORT = 23456;
+    public static int DEFAULT_PORT = 10093;
 
     private Socket socket;
     private Receiver receiver;

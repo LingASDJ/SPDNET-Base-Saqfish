@@ -52,7 +52,7 @@ public class WndPlayerList extends NetWindow {
 
 		float y = 2;
 
-		RenderedTextBlock titleLbl = PixelScene.renderTextBlock(Messages.get("online"), 9);
+		RenderedTextBlock titleLbl = PixelScene.renderTextBlock(Messages.get(WndPlayerList.class,"online"), 9);
 		add(titleLbl);
 		titleLbl.setPos(VGAP/2, y);
 

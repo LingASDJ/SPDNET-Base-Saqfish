@@ -122,7 +122,8 @@ public class Receiver {
 
         // Leave/Join
         public void handleLeaveJoin(boolean isLeaving,  String nick) {
-                GLog.p(nick + (Messages.get("has"))+ (isLeaving? (Messages.get("join")): (Messages.get("left"))));
+                GLog.p(nick + (Messages.get(Receiver.class,"has"))+ (isLeaving? (Messages.get(Receiver.class,"join")): (Messages.get(
+                        Receiver.class,"left"))));
         }
 
         // Action handler
@@ -176,7 +177,7 @@ public class Receiver {
                         }
                         item.doPickUp(Dungeon.hero);
                         GameScene.pickUp(item, Dungeon.hero.pos);
-                        GLog.p((Messages.get("received")) + item.name(), new Object[0]);
+                        GLog.p((Messages.get(Receiver.class,"received")) + item.name(), new Object[0]);
                 } catch (Exception e) {
                 }
         }
